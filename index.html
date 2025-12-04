@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - GitHub PR Helper</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #24292e;
+            border-bottom: 3px solid #0366d6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .highlight {
+            background: #f1f8ff;
+            padding: 15px;
+            border-left: 4px solid #0366d6;
+            margin: 20px 0;
+        }
+        .contact {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for GitHub PR Helper</h1>
+        <p class="last-updated"><strong>Last Updated:</strong> December 2024</p>
+
+        <h2>Introduction</h2>
+        <p>GitHub PR Helper ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our Chrome extension.</p>
+
+        <h2>Data Collection</h2>
+        <div class="highlight">
+            <strong>We do not collect, store, or transmit any personal data or user information.</strong>
+        </div>
+        <p>The extension operates entirely locally on your device and only enhances GitHub pull request pages with additional features.</p>
+
+        <h2>What We Do</h2>
+        
+        <h3>Local Storage</h3>
+        <p>The extension uses Chrome's local storage API to:</p>
+        <ul>
+            <li><strong>Store extension settings</strong> - Save your preferences such as file size warning threshold, template checker, and quick actions</li>
+        </ul>
+        <p>All data is stored locally on your device and is never transmitted to any third-party servers or services.</p>
+
+        <h3>GitHub PR Page Enhancement</h3>
+        <p>The extension only enhances GitHub pull request pages when you visit them by:</p>
+        <ul>
+            <li>Calculating and displaying PR statistics (lines added/removed, files changed)</li>
+            <li>Adding file size warnings for large files</li>
+            <li>Adding quick action buttons (approve, request changes, comment)</li>
+            <li>Checking if PR follows the template</li>
+        </ul>
+        <p>The extension:</p>
+        <ul>
+            <li>Only reads PR statistics from the page DOM (lines added/removed, file counts)</li>
+            <li>Only modifies the appearance and adds functionality to GitHub PR pages</li>
+            <li>Does not access or store any PR content, code, or descriptions</li>
+            <li>Does not access any personal information or sensitive data</li>
+            <li>Does not read or store any GitHub user data</li>
+            <li>All enhancements are applied locally in your browser</li>
+            <li>Statistics are calculated from the page content, not stored</li>
+        </ul>
+
+        <h2>Permissions Explained</h2>
+        
+        <h3>storage</h3>
+        <p>Used to save your extension settings locally on your device. All data remains on your device and is never transmitted.</p>
+
+        <h3>scripting</h3>
+        <p>Used to inject a content script into GitHub pull request pages. This script enables the enhancement features such as PR statistics, file size warnings, quick action buttons, and template checking. The script operates entirely locally and does not collect or transmit any data.</p>
+
+        <h3>Host Permissions</h3>
+        <ul>
+            <li><code>https://github.com/*</code> - To enhance GitHub pull request pages with additional features</li>
+            <li><code>https://api.github.com/*</code> - Optional: To fetch additional PR data from GitHub's public API (if implemented in future versions)</li>
+        </ul>
+        <p>These permissions are only used to apply enhancements to GitHub PR pages. No data is collected or transmitted. If the extension uses GitHub's API in the future, it will only access publicly available PR information and will not require authentication.</p>
+
+        <h2>Data Sharing</h2>
+        <div class="highlight">
+            <strong>We do not share, sell, or transfer any data to third parties.</strong>
+        </div>
+        <p>All data remains on your device. We do not:</p>
+        <ul>
+            <li>Collect personal information</li>
+            <li>Track user behavior</li>
+            <li>Share data with advertisers</li>
+            <li>Sell data to third parties</li>
+            <li>Use data for any purpose other than enhancing GitHub PRs</li>
+            <li>Access or store GitHub PR content</li>
+            <li>Transmit any data to external servers</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>The extension does not communicate with any external servers or third-party services. All functionality operates entirely locally on your device. If the extension uses GitHub's public API in the future, it will only access publicly available information and will not transmit any data.</p>
+
+        <h2>Your Rights</h2>
+        <p>Since we do not collect any personal data, there is no personal data to access, modify, or delete. All stored settings can be cleared by:</p>
+        <ul>
+            <li>Resetting settings in the extension popup</li>
+            <li>Uninstalling the extension</li>
+            <li>Clearing Chrome's extension storage</li>
+            <li>Disabling the extension</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>Our extension does not knowingly collect any information from children. Since we do not collect any data, this is not applicable.</p>
+
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify users of any changes by updating the "Last Updated" date at the top of this policy.</p>
+
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us through:</p>
+            <ul>
+                <li>GitHub Issues: <a href="https://github.com/R0LL0/github-pr-helper-privacy">https://github.com/R0LL0/github-pr-helper-privacy</a></li>
+                <li>Email: github-main-branch@proton.me</li>
+            </ul>
+        </div>
+
+        <h2>Compliance</h2>
+        <p>This extension complies with:</p>
+        <ul>
+            <li>Chrome Web Store Developer Program Policies</li>
+            <li>General Data Protection Regulation (GDPR)</li>
+            <li>California Consumer Privacy Act (CCPA)</li>
+        </ul>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
+        <p><strong>By using GitHub PR Helper, you agree to this Privacy Policy.</strong></p>
+    </div>
+</body>
+</html>
+
