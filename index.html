@@ -71,27 +71,36 @@
         <h3>Local Storage</h3>
         <p>The extension uses Chrome's local storage API to:</p>
         <ul>
-            <li><strong>Store extension settings</strong> - Save your preferences such as file size warning threshold, template checker, and quick actions</li>
+            <li><strong>Store extension settings</strong> - Save your preferences such as file size warning threshold, template checker, quick actions, tree view, and quick search</li>
+            <li><strong>Store domain preferences</strong> - Remember which domains have the extension enabled or disabled</li>
+            <li><strong>Store viewed files</strong> - Track which files you've marked as viewed for your own reference (only file paths, not content)</li>
         </ul>
         <p>All data is stored locally on your device and is never transmitted to any third-party servers or services.</p>
 
-        <h3>GitHub PR Page Enhancement</h3>
-        <p>The extension only enhances GitHub pull request pages when you visit them by:</p>
+        <h3>GitHub Page Enhancement</h3>
+        <p>The extension enhances GitHub pages (pull requests, repositories, and file trees) when you visit them by:</p>
         <ul>
             <li>Calculating and displaying PR statistics (lines added/removed, files changed)</li>
             <li>Adding file size warnings for large files</li>
             <li>Adding quick action buttons (approve, request changes, comment)</li>
             <li>Checking if PR follows the template</li>
+            <li>Displaying a file tree view for easy navigation</li>
+            <li>Enabling quick file search (Ctrl+I / Cmd+I)</li>
+            <li>Allowing commit switching via keyboard shortcuts</li>
+            <li>Tracking which files you've viewed (marked as reviewed)</li>
         </ul>
         <p>The extension:</p>
         <ul>
-            <li>Only reads PR statistics from the page DOM (lines added/removed, file counts)</li>
-            <li>Only modifies the appearance and adds functionality to GitHub PR pages</li>
+            <li>Only reads page content from the DOM (file lists, PR statistics, file paths)</li>
+            <li>Only modifies the appearance and adds functionality to GitHub pages</li>
+            <li>Stores your viewing preferences locally (which files you've marked as viewed)</li>
+            <li>Stores your domain preferences (which domains have the extension enabled)</li>
             <li>Does not access or store any PR content, code, or descriptions</li>
             <li>Does not access any personal information or sensitive data</li>
             <li>Does not read or store any GitHub user data</li>
             <li>All enhancements are applied locally in your browser</li>
             <li>Statistics are calculated from the page content, not stored</li>
+            <li>File tree structure is built from the page DOM, not stored</li>
         </ul>
 
         <h2>Permissions Explained</h2>
@@ -100,14 +109,15 @@
         <p>Used to save your extension settings locally on your device. All data remains on your device and is never transmitted.</p>
 
         <h3>scripting</h3>
-        <p>Used to inject a content script into GitHub pull request pages. This script enables the enhancement features such as PR statistics, file size warnings, quick action buttons, and template checking. The script operates entirely locally and does not collect or transmit any data.</p>
+        <p>Used to inject a content script into GitHub pages (pull requests, repositories, and file trees). This script enables the enhancement features such as PR statistics, file size warnings, quick action buttons, template checking, file tree view, quick search, and commit switching. The script operates entirely locally and does not collect or transmit any data.</p>
 
         <h3>Host Permissions</h3>
         <ul>
-            <li><code>https://github.com/*</code> - To enhance GitHub pull request pages with additional features</li>
+            <li><code>https://github.com/*</code> - To enhance GitHub pages (pull requests, repositories, file trees) with additional features</li>
+            <li><code>https://*.github.com/*</code> - To support GitHub Enterprise and private GitHub instances</li>
             <li><code>https://api.github.com/*</code> - Optional: To fetch additional PR data from GitHub's public API (if implemented in future versions)</li>
         </ul>
-        <p>These permissions are only used to apply enhancements to GitHub PR pages. No data is collected or transmitted. If the extension uses GitHub's API in the future, it will only access publicly available PR information and will not require authentication.</p>
+        <p>These permissions are only used to apply enhancements to GitHub pages. No data is collected or transmitted. If the extension uses GitHub's API in the future, it will only access publicly available information and will not require authentication.</p>
 
         <h2>Data Sharing</h2>
         <div class="highlight">
@@ -128,13 +138,16 @@
         <p>The extension does not communicate with any external servers or third-party services. All functionality operates entirely locally on your device. If the extension uses GitHub's public API in the future, it will only access publicly available information and will not transmit any data.</p>
 
         <h2>Your Rights</h2>
-        <p>Since we do not collect any personal data, there is no personal data to access, modify, or delete. All stored settings can be cleared by:</p>
+        <p>Since we do not collect any personal data, there is no personal data to access, modify, or delete. All stored settings and preferences can be cleared by:</p>
         <ul>
             <li>Resetting settings in the extension popup</li>
+            <li>Disabling the extension for specific domains</li>
+            <li>Clearing your viewed files list</li>
             <li>Uninstalling the extension</li>
             <li>Clearing Chrome's extension storage</li>
             <li>Disabling the extension</li>
         </ul>
+        <p>All data stored locally (settings, domain preferences, viewed files) can be cleared at any time through the extension settings or by uninstalling the extension.</p>
 
         <h2>Children's Privacy</h2>
         <p>Our extension does not knowingly collect any information from children. Since we do not collect any data, this is not applicable.</p>
